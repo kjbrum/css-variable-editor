@@ -32,7 +32,10 @@ var cve = {
                 'padding: 1rem;' +
                 'font-size: 0.9rem !important;' +
                 'color: black !important;' +
-                'background-color: white !important;' +
+                'text-align: left;' +
+                'border: solid #333333 !important;' +
+                'border-width: 1px 0 0 1px !important;' +
+                'background-color: #f5f5f5 !important;' +
             '}' +
         '</style>');
     },
@@ -45,17 +48,17 @@ var cve = {
         '<div class="cve">' +
             '<div class="cve__input cve__input--color">' +
                 '<label>Background color:<br>' +
-                    '<input type="color" id="background-color" value="#ffffff"><br>' +
+                    '<input type="color" id="background-color" value="#ffffff">' +
                 '</label>' +
             '</div>' +
             '<div class="cve__input cve__input--color">' +
                 '<label>Font color:<br>' +
-                    '<input type="color" id="font-color" value="#ffffff"><br>' +
+                    '<input type="color" id="font-color" value="#ffffff">' +
                 '</label>' +
             '</div>' +
             '<div class="cve__input cve__input--text">' +
                 '<label>Font size:<br>' +
-                    '<input type="range" id="font-size" min="0.8" max="2" step="0.1" value="1"><br>' +
+                    '<input type="range" id="font-size" min="50" max="250" step="1" value="150">' +
                 '</label>' +
             '</div>' +
             '<div class="cve__input cve__input--text">' +
@@ -82,7 +85,7 @@ var cve = {
         });
 
         $('#font-size').on('input', function(e) {
-            self.handleInput('font-size', e.target.value, 'rem');
+            self.handleInput('font-size', e.target.value, '%');
         });
 
         $('#reset').on('click', function(e) {
