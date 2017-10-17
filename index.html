@@ -16,10 +16,28 @@
             }
             rawFile.send(null);
         </script>
+
+        <style>
+            :root {
+                --background-color: #ffffff;
+                --font-color: #333333;
+                --font-size: 2rem;
+            }
+
+            body {
+                font-size: var(--font-size);
+                color: var(--font-color);
+                background-color: var(--background-color);
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </style>
     </head>
     <body>
         <h1>Bookmarklet</h1>
-        <a href="#" id="bookmarklet">CSS Variable Editor</a>
+        Drag to your bookmark bar or just click to give it a try: <a href="#" id="bookmarklet">CSS Variable Editor</a>
 
         <br>
         <br>
