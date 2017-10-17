@@ -2,6 +2,20 @@
 <html>
     <head>
         <title>CSS Variable Editor</title>
+        <script>
+            var rawFile = new XMLHttpRequest();
+            var fileText = '';
+            rawFile.open('GET', 'css-variable-editor.bookmarklet', true);
+            rawFile.onreadystatechange = function () {
+                if(rawFile.readyState === 4) {
+                    if(rawFile.status === 200 || rawFile.status == 0) {
+                        fileText = rawFile.responseText;
+                    }
+                }
+            }
+            console.log(fileText);
+            rawFile.send(null);
+        </script>
     </head>
     <body>
         <h1>Bookmarklet</h1>
