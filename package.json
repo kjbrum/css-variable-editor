@@ -1,0 +1,29 @@
+{
+  "name": "css-variable-editor",
+  "version": "1.0.0",
+  "description": "Just visit http://kylebrumm.com/css-variable-editor and drag the link to your bookmark bar!",
+  "main": "script.js",
+  "scripts": {
+    "build": "bookmarkletify script.js -o css-variable-editor.bookmarklet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjbrum/css-variable-editor.git"
+  },
+  "keywords": [
+    "bookmarklet",
+    "css",
+    "editor",
+    "styles",
+    "variables"
+  ],
+  "author": "Kyle Brumm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjbrum/css-variable-editor/issues"
+  },
+  "homepage": "https://github.com/kjbrum/css-variable-editor#readme",
+  "devDependencies": {
+    "bookmarkletify": "latest"
+  }
+}
