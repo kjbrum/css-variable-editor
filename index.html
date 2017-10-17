@@ -10,19 +10,16 @@
                 if(rawFile.readyState === 4) {
                     if(rawFile.status === 200 || rawFile.status == 0) {
                         fileText = rawFile.responseText;
-                        console.log('success');
-                        console.log(rawFile);
-                        console.log(fileText);
+                        document.getElementById('bookmarklet').href = fileText;
                     }
                 }
             }
-            console.log(fileText);
             rawFile.send(null);
         </script>
     </head>
     <body>
         <h1>Bookmarklet</h1>
-        <a href="#">CSS Variable Editor</a>
+        <a href="#" id="bookmarklet">CSS Variable Editor</a>
 
         <br>
         <br>
