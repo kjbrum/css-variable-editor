@@ -8,7 +8,7 @@ var cve = {
             self.addStyles();
             self.addEditor();
             self.addListeners();
-        }, 500);
+        }, 250);
     },
 
     // Add jQuery to the head
@@ -106,11 +106,9 @@ var cve = {
             $input.val(value.replace('rem', ''));
         } else {
             value = getComputedStyle(document.body).getPropertyValue('--'+property);
-            console.log(value);
             $input.val(value.replace('rem', '').trim());
         }
     }
-
 }
 
 cve.init();
